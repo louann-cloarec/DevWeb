@@ -9,22 +9,11 @@ Cette documentation regroupe les structures CSS les plus fiables trouvées dans 
 Le code obligatoire à mettre tout en haut de chaque fichier CSS pour éviter les comportements étranges entre les différents navigateurs HTML.
 
 ```css
-/* Définition de variables CSS (couleurs principales) pour pouvoir les changer facilement partout */
-:root {
-    --couleur-primaire: #2c3e50;
-    --couleur-secondaire: #3498db;
-    --couleur-fond: #f8f9fa;
-    --couleur-texte: #333333;
-    --blanc: #ffffff;
-}
 
 * {
     /* Le box-sizing permet d'inclure les bordures et paddings dans la largeur (width) 
        d'un élément, évitant ainsi qu'il ne déborde inopinément. C'EST VITAL ! */
     box-sizing: border-box;
-    
-    /* Astuce de debug : décommentez ceci pour voir les limites de toutes vos boites 
-       border: 1px dashed red; */
 }
 
 html {
@@ -48,15 +37,15 @@ body {
     padding: 0;
     min-height: 100vh;        /* Le corps prend au minimum TOUTE l'hauteur de l'écran */
     width: 100vw;             /* Le corps prend TOUTE la largeur de l'écran */
-    background-color: var(--couleur-fond);
+    background-color: #fff;
 }
 
 /* --- EN-TÊTE --- */
 header {
     flex-grow: 0;             /* Ne grandit pas */
     height: 70px;
-    background-color: var(--couleur-primaire);
-    color: var(--blanc);
+    background-color: #fff;
+    color: #fff;
     display: flex;
     flex-direction: row;      /* Les éléments sont côte à côte */
     align-items: center;      /* Centrage vertical */
@@ -77,8 +66,8 @@ main {
 /* --- PIED DE PAGE --- */
 footer {
     flex-grow: 0;
-    background-color: var(--couleur-primaire);
-    color: var(--blanc);
+    background-color: pink;
+    color: black;
     text-align: center;
     padding: 15px;
 }
