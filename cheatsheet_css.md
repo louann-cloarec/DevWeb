@@ -37,15 +37,15 @@ body {
     padding: 0;
     min-height: 100vh;        /* Le corps prend au minimum TOUTE l'hauteur de l'écran */
     width: 100vw;             /* Le corps prend TOUTE la largeur de l'écran */
-    background-color: #fff;
+    background-color: pink;
 }
 
 /* --- EN-TÊTE --- */
 header {
     flex-grow: 0;             /* Ne grandit pas */
     height: 70px;
-    background-color: #fff;
-    color: #fff;
+    background-color: pink;
+    color: black;
     display: flex;
     flex-direction: row;      /* Les éléments sont côte à côte */
     align-items: center;      /* Centrage vertical */
@@ -87,14 +87,13 @@ nav {
 
 nav a {
     text-decoration: none;         /* Enlève le soulignement moche par défaut des liens */
-    color: var(--blanc);
+    color: black;
     border-left: 1px solid #ccc;   /* Séparation entre les liens */
     padding: 10px 15px;
     
     display: flex;                 /* Pour bien centrer le texte du lien à l'intérieur */
     align-items: center;
     justify-content: center;
-    transition: 0.3s;              /* Animation douce au survol */
 }
 
 nav a:hover {
