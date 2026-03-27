@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+    <script src="{{ url_for('static', filename='js/auth.js') }}" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Authentification</h1>
+    </header>
+
+    <main>
+        <div class="card">
+            <!-- Formulaire de connexion (visible par défaut) -->
+            <form id="Connexion">
+                <h2>Connexion :</h2>
+                <label for="login">Login</label>
+                <input type="text" id="login" name="login" />
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" />
+
+                <button class="loginBtn" type="submitCon">Connexion</button>
+            </form>
+            <button class="loginBtn" id="sinscrire">S'inscrire</button>
+
+            <!-- Formulaire d'inscription (caché par défaut), le js l'active -->
+            <form id="Inscription" style="display: none;">
+                <h2>Inscription :</h2>
+
+                <label for="login">Login</label>
+                <input type="text" id="newLogin" name="login" />
+
+                <label for="password">Password</label>
+                <input type="password" id="newPassword" name="password" />
+
+                <button class="loginBtn" type="submitIns">Créer un compte</button>
+            </form>
+            <button class="loginBtn" id="retourConnexion" style="display: none;">Déjà inscrit ? Se connecter</button>
+        </div>
+    </main>
+
+</body>
+</html>

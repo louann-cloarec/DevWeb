@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+    <script src="{{ url_for('static', filename='js/app.js') }}" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Titre</h1>
+        <nav>
+            <a id="page2" href = "/page2">Page2</a>
+            <a id="page3" href = "/page3">Page3</a>
+        </nav>
+        <button id="logout">Déconnexion</button>
+        
+    </header>
+
+    <main>
+        <div class="card">
+            <h1>Bienvenue, {{user.username}}</h1> 
+            <ul>
+            {% for item in liste %}
+                <li>{{item}}</li>
+            {% endfor %}
+            </ul>
+        <div>
+        
+    </main>
+
+    <footer>
+        <p>Footer</p>
+    </footer>
+    </body>
+</body>
+</html>
